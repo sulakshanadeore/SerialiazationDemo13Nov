@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SerialiazationDemo
 {
     [Serializable]
-    internal class Products
+    public class Products
     {
 
         public int ProductID { get; set; }
@@ -15,6 +15,7 @@ namespace SerialiazationDemo
         public int Price { get; set; }
         public int QtyInHand { get; set; }
 
+        [NonSerialized]
         int soldQty;
         public int QtySold 
         {
